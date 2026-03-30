@@ -1,301 +1,512 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Your instructors send student names on WhatsApp. Belt does the rest." data-i18n="hero.subtitle">
-  <title>Belt — Attendance via WhatsApp</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo-belt.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Your instructors send student names on WhatsApp. Belt does the rest."
+      data-i18n="hero.subtitle"
+    />
+    <title>Belt — Attendance via WhatsApp</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo-belt.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Belt — Attendance via WhatsApp">
-  <meta property="og:description" content="Your instructors send student names on WhatsApp. Belt does the rest.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/og-banner.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Belt — Attendance via WhatsApp" />
+    <meta
+      property="og:description"
+      content="Your instructors send student names on WhatsApp. Belt does the rest."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/og-banner.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Belt",
-    "description": "WhatsApp-based attendance management for martial arts gyms",
-    "brand": {
-      "@type": "Organization",
-      "name": "MallBerg Solucoes",
-      "url": "sobre.html"
-    }
-  }
-  </script>
-</head>
-<body>
-  <a href="#main" class="skip-link">Skip to content</a>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Belt",
+        "description": "WhatsApp-based attendance management for martial arts gyms",
+        "brand": {
+          "@type": "Organization",
+          "name": "MallBerg Solucoes",
+          "url": "sobre.html"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="/" class="logo" aria-label="Belt Home">
-        <img src="assets/logo-belt.svg" alt="Belt" width="120" height="40">
-      </a>
-
-      <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="#how-it-works" data-i18n="nav.howItWorks">How It Works</a></li>
-          <li><a href="#features" data-i18n="nav.features">Features</a></li>
-          <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-right">
-        <div class="lang-switcher">
-          <button id="lang-toggle" aria-label="Change language" aria-haspopup="true">
-            <img id="active-flag" src="assets/flags/us.svg" alt="EN" width="28" height="28">
-          </button>
-          <div id="lang-dropdown" class="lang-dropdown" role="menu">
-            <button data-lang="pt" role="menuitem">
-              <img src="assets/flags/br.svg" alt="" width="22" height="22"> <span data-i18n="lang.pt">Portuguese</span>
-            </button>
-            <button data-lang="en" role="menuitem">
-              <img src="assets/flags/us.svg" alt="" width="22" height="22"> <span data-i18n="lang.en">English</span>
-            </button>
-            <button data-lang="es" role="menuitem">
-              <img src="assets/flags/es.svg" alt="" width="22" height="22"> <span data-i18n="lang.es">Spanish</span>
-            </button>
-          </div>
-        </div>
-        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <div id="nav-overlay" class="nav-overlay"></div>
-
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1 data-i18n="hero.title">Attendance via WhatsApp. That simple.</h1>
-          <p data-i18n="hero.subtitle">Your instructors send student names on WhatsApp. Belt does the rest.</p>
-          <a href="#" class="btn-wa wa-link" aria-label="Start using Belt via WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span data-i18n="hero.cta">Start using Belt</span>
-          </a>
-        </div>
-        <div class="hero-mockup">
-          <div class="phone-frame">
-            <div class="phone-header">
-              <div class="avatar">B</div>
-              <span>Belt</span>
-            </div>
-            <div class="phone-chat">
-              <div class="msg msg-sent">
-                João, Maria, Pedro, Ana, Lucas
-                <div class="time">10:32</div>
-              </div>
-              <div class="msg msg-received">
-                &#10003; 5 students recorded for today's class.
-                <div class="time">10:32</div>
-              </div>
-              <div class="msg msg-sent">
-                #a
-                <div class="time">10:33</div>
-              </div>
-              <div class="msg msg-received">
-                &#128202; Monthly attendance:<br>
-                João: 12 classes<br>
-                Maria: 10 classes<br>
-                Pedro: 8 classes<br>
-                Ana: 15 classes<br>
-                Lucas: 6 classes
-                <div class="time">10:33</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
-      <div class="container">
-        <h2 class="section-title" data-i18n="howItWorks.title">How it works</h2>
-        <div class="steps">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <div class="step-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-            </div>
-            <h3 data-i18n="howItWorks.step1.title">Instructor sends a message</h3>
-            <p data-i18n="howItWorks.step1.desc">Text or voice with the names of students who came to train. No app, no login, straight from WhatsApp.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <div class="step-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 data-i18n="howItWorks.step2.title">Belt records attendance</h3>
-            <p data-i18n="howItWorks.step2.desc">AI identifies the names, checks for duplicates, and logs everything automatically.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <div class="step-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <h3 data-i18n="howItWorks.step3.title">You track the data</h3>
-            <p data-i18n="howItWorks.step3.desc">Automatic weekly reports. Frequency, trends, missing students, all in your WhatsApp.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section id="features" class="features">
-      <div class="container">
-        <h2 class="section-title" data-i18n="features.title">Features</h2>
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 data-i18n="features.attendance.title">Attendance by text</h3>
-            <p data-i18n="features.attendance.desc">Send 'Joao, Maria, Pedro' and done. Recognizes nicknames, partial last names, and messy lists.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-            </div>
-            <h3 data-i18n="features.audio.title">Attendance by voice</h3>
-            <p data-i18n="features.audio.desc">Record a voice message saying the names. Belt transcribes and logs automatically.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-            </div>
-            <h3 data-i18n="features.reports.title">Automatic reports</h3>
-            <p data-i18n="features.reports.desc">Every Sunday you get a weekly summary: who came, who didn't, attendance per student.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon-text">#</div>
-            <h3 data-i18n="features.commands.title">Quick commands</h3>
-            <p data-i18n="features.commands.desc">Send #a to see monthly attendance or #h for help. Fast and direct.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-            </div>
-            <h3 data-i18n="features.notes.title">Student notes</h3>
-            <p data-i18n="features.notes.desc">Log observations: 'Pedro promoted to blue belt', 'Ana knee injury'. Everything stays in the history.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon-text">?</div>
-            <h3 data-i18n="features.queries.title">Ask anything</h3>
-            <p data-i18n="features.queries.desc">'How many classes did João attend this month?' Belt queries the data and answers instantly.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Belt -->
-    <section class="why-belt">
-      <div class="container">
-        <h2 class="section-title" data-i18n="whyBelt.title">Why Belt?</h2>
-        <div class="pain-grid">
-          <div class="pain-card">
-            <div class="icon-before pain">&#10007;</div>
-            <div>
-              <div class="pain-text" data-i18n="whyBelt.pain1">Notebook attendance gets lost</div>
-              <div class="solution-text" data-i18n="whyBelt.solution1">All digital, automatic, with permanent history</div>
-            </div>
-          </div>
-          <div class="pain-card">
-            <div class="icon-before pain">&#10007;</div>
-            <div>
-              <div class="pain-text" data-i18n="whyBelt.pain2">Instructor forgets to log</div>
-              <div class="solution-text" data-i18n="whyBelt.solution2">Just send a WhatsApp, no extra app to open</div>
-            </div>
-          </div>
-          <div class="pain-card">
-            <div class="icon-before pain">&#10007;</div>
-            <div>
-              <div class="pain-text" data-i18n="whyBelt.pain3">I don't know who's missing</div>
-              <div class="solution-text" data-i18n="whyBelt.solution3">Weekly report shows who hasn't shown up</div>
-            </div>
-          </div>
-          <div class="pain-card">
-            <div class="icon-before pain">&#10007;</div>
-            <div>
-              <div class="pain-text" data-i18n="whyBelt.pain4">Spreadsheets are complicated</div>
-              <div class="solution-text" data-i18n="whyBelt.solution4">Zero spreadsheets. Zero computer. Just WhatsApp.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Pricing -->
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2 class="section-title" data-i18n="pricing.title">Simple and transparent</h2>
-        <div class="pricing-card">
-          <h3>[TO BE DEFINED]</h3>
-          <p class="price-subtitle" data-i18n="pricing.subtitle">Price on request</p>
-          <ul class="pricing-list">
-            <li data-i18n="pricing.includes.1">Unlimited instructors</li>
-            <li data-i18n="pricing.includes.2">Unlimited students</li>
-            <li data-i18n="pricing.includes.3">Weekly reports</li>
-            <li data-i18n="pricing.includes.4">WhatsApp support</li>
-          </ul>
-          <a href="#" class="btn-wa wa-link" aria-label="Talk to the team via WhatsApp">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span data-i18n="pricing.cta">Talk to the team</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section id="contact" class="final-cta">
-      <div class="container">
-        <h2 class="section-title" data-i18n="finalCta.title">Ready to ditch the attendance notebook?</h2>
-        <p data-i18n="finalCta.subtitle">Start now. No contract, no credit card.</p>
-        <a href="#" class="btn-wa wa-link" aria-label="Start using Belt via WhatsApp">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-i18n="finalCta.button">Start using Belt</span>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo" aria-label="Belt Home">
+          <img src="assets/logo-belt.svg" alt="Belt" width="120" height="40" />
         </a>
-      </div>
-    </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <img src="assets/logo-belt-light.svg" alt="Belt" width="100" height="32">
-        <span data-i18n="footer.product">Belt is a MallBerg Solucoes product</span>
-      </div>
-      <div class="footer-right">
-        <a href="sobre.html" data-i18n="footer.about">About MallBerg</a>
-        <span class="footer-copyright" data-i18n="footer.copyright">&copy; 2026 MallBerg Solucoes. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
+        <nav id="nav-menu" class="nav-menu" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li>
+              <a href="#how-it-works" data-i18n="nav.howItWorks"
+                >How It Works</a
+              >
+            </li>
+            <li><a href="#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
 
-  <!-- Floating WhatsApp -->
-  <a href="#" class="wa-float wa-link" aria-label="Contact via WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
+        <div class="header-right">
+          <div class="lang-switcher">
+            <button
+              id="lang-toggle"
+              aria-label="Change language"
+              aria-haspopup="true"
+            >
+              <img
+                id="active-flag"
+                src="assets/flags/us.svg"
+                alt="EN"
+                width="28"
+                height="28"
+              />
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown" role="menu">
+              <button data-lang="pt" role="menuitem">
+                <img src="assets/flags/br.svg" alt="" width="22" height="22" />
+                <span data-i18n="lang.pt">Portuguese</span>
+              </button>
+              <button data-lang="en" role="menuitem">
+                <img src="assets/flags/us.svg" alt="" width="22" height="22" />
+                <span data-i18n="lang.en">English</span>
+              </button>
+              <button data-lang="es" role="menuitem">
+                <img src="assets/flags/es.svg" alt="" width="22" height="22" />
+                <span data-i18n="lang.es">Spanish</span>
+              </button>
+            </div>
+          </div>
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
 
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <div id="nav-overlay" class="nav-overlay"></div>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 data-i18n="hero.title">
+              Attendance via WhatsApp. That simple.
+            </h1>
+            <p data-i18n="hero.subtitle">
+              Your instructors send student names on WhatsApp. Belt does the
+              rest.
+            </p>
+            <a
+              href="#"
+              class="btn-wa wa-link"
+              aria-label="Start using Belt via WhatsApp"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              <span data-i18n="hero.cta">Start using Belt</span>
+            </a>
+          </div>
+          <div class="hero-mockup">
+            <div class="phone-frame">
+              <div class="phone-header">
+                <div class="avatar">B</div>
+                <span>Belt</span>
+              </div>
+              <div class="phone-chat">
+                <div class="msg msg-sent">
+                  João, Maria, Pedro, Ana, Lucas
+                  <div class="time">10:32</div>
+                </div>
+                <div class="msg msg-received">
+                  &#10003; 5 students recorded for today's class.
+                  <div class="time">10:32</div>
+                </div>
+                <div class="msg msg-sent">
+                  #a
+                  <div class="time">10:33</div>
+                </div>
+                <div class="msg msg-received">
+                  &#128202; Monthly attendance:<br />
+                  João: 12 classes<br />
+                  Maria: 10 classes<br />
+                  Pedro: 8 classes<br />
+                  Ana: 15 classes<br />
+                  Lucas: 6 classes
+                  <div class="time">10:33</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section id="how-it-works" class="how-it-works">
+        <div class="container">
+          <h2 class="section-title" data-i18n="howItWorks.title">
+            How it works
+          </h2>
+          <div class="steps">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <div class="step-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                  />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="23" />
+                  <line x1="8" y1="23" x2="16" y2="23" />
+                </svg>
+              </div>
+              <h3 data-i18n="howItWorks.step1.title">
+                Instructor sends a message
+              </h3>
+              <p data-i18n="howItWorks.step1.desc">
+                Text or voice with the names of students who came to train. No
+                app, no login, straight from WhatsApp.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <div class="step-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <h3 data-i18n="howItWorks.step2.title">
+                Belt records attendance
+              </h3>
+              <p data-i18n="howItWorks.step2.desc">
+                AI identifies the names, checks for duplicates, and logs
+                everything automatically.
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <div class="step-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h3 data-i18n="howItWorks.step3.title">You track the data</h3>
+              <p data-i18n="howItWorks.step3.desc">
+                Automatic weekly reports. Frequency, trends, missing students,
+                all in your WhatsApp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title" data-i18n="features.title">Features</h2>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.attendance.title">Attendance by text</h3>
+              <p data-i18n="features.attendance.desc">
+                Send 'Joao, Maria, Pedro' and done. Recognizes nicknames,
+                partial last names, and messy lists.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                  />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="23" />
+                  <line x1="8" y1="23" x2="16" y2="23" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.audio.title">Attendance by voice</h3>
+              <p data-i18n="features.audio.desc">
+                Record a voice message saying the names. Belt transcribes and
+                logs automatically.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.reports.title">Automatic reports</h3>
+              <p data-i18n="features.reports.desc">
+                Every Sunday you get a weekly summary: who came, who didn't,
+                attendance per student.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-text">#</div>
+              <h3 data-i18n="features.commands.title">Quick commands</h3>
+              <p data-i18n="features.commands.desc">
+                Send #a to see monthly attendance or #h for help. Fast and
+                direct.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+              </div>
+              <h3 data-i18n="features.notes.title">Student notes</h3>
+              <p data-i18n="features.notes.desc">
+                Log observations: 'Pedro promoted to blue belt', 'Ana knee
+                injury'. Everything stays in the history.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon-text">?</div>
+              <h3 data-i18n="features.queries.title">Ask anything</h3>
+              <p data-i18n="features.queries.desc">
+                'How many classes did João attend this month?' Belt queries the
+                data and answers instantly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Belt -->
+      <section class="why-belt">
+        <div class="container">
+          <h2 class="section-title" data-i18n="whyBelt.title">Why Belt?</h2>
+          <div class="pain-grid">
+            <div class="pain-card">
+              <div class="icon-before pain">&#10007;</div>
+              <div>
+                <div class="pain-text" data-i18n="whyBelt.pain1">
+                  Notebook attendance gets lost
+                </div>
+                <div class="solution-text" data-i18n="whyBelt.solution1">
+                  All digital, automatic, with permanent history
+                </div>
+              </div>
+            </div>
+            <div class="pain-card">
+              <div class="icon-before pain">&#10007;</div>
+              <div>
+                <div class="pain-text" data-i18n="whyBelt.pain2">
+                  Instructor forgets to log
+                </div>
+                <div class="solution-text" data-i18n="whyBelt.solution2">
+                  Just send a WhatsApp, no extra app to open
+                </div>
+              </div>
+            </div>
+            <div class="pain-card">
+              <div class="icon-before pain">&#10007;</div>
+              <div>
+                <div class="pain-text" data-i18n="whyBelt.pain3">
+                  I don't know who's missing
+                </div>
+                <div class="solution-text" data-i18n="whyBelt.solution3">
+                  Weekly report shows who hasn't shown up
+                </div>
+              </div>
+            </div>
+            <div class="pain-card">
+              <div class="icon-before pain">&#10007;</div>
+              <div>
+                <div class="pain-text" data-i18n="whyBelt.pain4">
+                  Spreadsheets are complicated
+                </div>
+                <div class="solution-text" data-i18n="whyBelt.solution4">
+                  Zero spreadsheets. Zero computer. Just WhatsApp.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="pricing">
+        <div class="container">
+          <h2 class="section-title" data-i18n="pricing.title">
+            Simple and transparent
+          </h2>
+          <div class="pricing-card">
+            <h3>[TO BE DEFINED]</h3>
+            <p class="price-subtitle" data-i18n="pricing.subtitle">
+              Price on request
+            </p>
+            <ul class="pricing-list">
+              <li data-i18n="pricing.includes.1">Unlimited instructors</li>
+              <li data-i18n="pricing.includes.2">Unlimited students</li>
+              <li data-i18n="pricing.includes.3">Weekly reports</li>
+              <li data-i18n="pricing.includes.4">WhatsApp support</li>
+            </ul>
+            <a
+              href="#"
+              class="btn-wa wa-link"
+              aria-label="Talk to the team via WhatsApp"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              <span data-i18n="pricing.cta">Talk to the team</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section id="contact" class="final-cta">
+        <div class="container">
+          <h2 class="section-title" data-i18n="finalCta.title">
+            Ready to ditch the attendance notebook?
+          </h2>
+          <p data-i18n="finalCta.subtitle">
+            Start now. No contract, no credit card.
+          </p>
+          <a
+            href="#"
+            class="btn-wa wa-link"
+            aria-label="Start using Belt via WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+            <span data-i18n="finalCta.button">Start using Belt</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <img
+            src="assets/logo-belt-light.svg"
+            alt="Belt"
+            width="100"
+            height="32"
+          />
+          <span data-i18n="footer.product"
+            >Belt is a MallBerg Solucoes product</span
+          >
+        </div>
+        <div class="footer-right">
+          <a href="sobre.html" data-i18n="footer.about">About MallBerg</a>
+          <span class="footer-copyright" data-i18n="footer.copyright"
+            >&copy; 2026 MallBerg Solucoes. All rights reserved.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="#" class="wa-float wa-link" aria-label="Contact via WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
