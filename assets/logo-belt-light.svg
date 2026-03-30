@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <rect x="2" y="8" width="24" height="24" rx="6" fill="#fff"/>
+  <path d="M10 16h8v2h-8zm0 4h8v2h-8zm0 4h6v2h-6z" fill="#7a51e0"/>
+  <text x="32" y="28" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="24" fill="#fff">Belt</text>
+</svg>
